@@ -1,0 +1,124 @@
+.b_btc_widget {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  min-height: 400px;
+  background-color: #333333;
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16), 0px -4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.b_btc_widget .input {
+  position: relative;
+}
+.b_btc_widget .input label {
+  position: relative;
+  user-select: none;
+  cursor: text;
+}
+.b_btc_widget .input label .info {
+  position: absolute;
+  top: -1px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-left: 16px;
+}
+.b_btc_widget .input label .info .logo {
+  display: flex;
+  align-items: center;
+}
+.b_btc_widget .input label .info .icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  background-image: url("img/Icon-btc.svg");
+}
+.b_btc_widget .input label .info .datetime {
+  line-height: 8px;
+  font-size: 8px;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #BDBDBD;
+}
+.b_btc_widget .input input[name=btc] {
+  width: 100%;
+  font-size: 16px;
+  padding: 16px 16px 16px 80px;
+  height: 88px;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  /** @see https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box */
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+.b_btc_widget .input input[name=btc]::-webkit-outer-spin-button,
+.b_btc_widget .input input[name=btc]::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+.b_btc_widget .currencies {
+  list-style: none;
+  padding: 30px 16px;
+  margin: 0;
+  color: white;
+}
+.b_btc_widget .currencies li {
+  display: flex;
+  align-items: center;
+  line-height: 14px;
+  height: 14px;
+}
+.b_btc_widget .currencies li + li {
+  margin-top: 26px;
+}
+.b_btc_widget .currencies li.template {
+  display: none;
+}
+.b_btc_widget .currencies .logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.b_btc_widget .currencies .logo .icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: -1px;
+  margin-right: 10px;
+}
+.b_btc_widget .currencies .logo .icon.USD {
+  background-image: url("img/currency/USD.svg");
+}
+.b_btc_widget .currencies .logo .icon.AUD {
+  background-image: url("img/currency/AUD.svg");
+}
+.b_btc_widget .currencies .logo .icon.CAD {
+  background-image: url("img/currency/CAD.svg");
+}
+.b_btc_widget .currencies .logo .icon.CLP {
+  background-image: url("img/currency/CLP.svg");
+}
+.b_btc_widget .currencies .logo .icon.HKD {
+  background-image: url("img/currency/HKD.svg");
+}
+.b_btc_widget .currencies .logo .icon.NZD {
+  background-image: url("img/currency/NZD.svg");
+}
+.b_btc_widget .currencies .logo .icon.SGD {
+  background-image: url("img/currency/SGD.svg");
+}
+.b_btc_widget .currencies .sum {
+  flex-grow: 1;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 10px;
+}
